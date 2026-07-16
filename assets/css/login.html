@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gadget Zone Lanka - Login</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0b1220;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-box{
+background:white;
+padding:35px;
+width:350px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+text-align:center;
+}
+
+img{
+width:90px;
+margin-bottom:15px;
+}
+
+h2{
+margin-bottom:20px;
+color:#0d6efd;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#084298;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<img src="assets/images/logo.png">
+
+<h2>Gadget Zone Lanka</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">LOGIN</button>
+
+</div>
+
+<script>
+function login(){
+
+let u=document.getElementById("username").value;
+let p=document.getElementById("password").value;
+
+if(u==="admin" && p==="123456"){
+
+window.location="dashboard.html";
+
+}else{
+
+alert("Invalid Username or Password");
+
+}
+
+}
+</script>
+
+</body>
+</html>
